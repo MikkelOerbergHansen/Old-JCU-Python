@@ -1,0 +1,44 @@
+<Label>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+BoxLayout:
+    # orientation: 'vertical'
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+
+        TextInput:
+            id: input_number
+            text: "30"
+            font_size: 48
+            multiline: False
+            on_text: app.calculation()
+
+        BoxLayout:
+            orientation: "vertical"
+
+            size_hint_x: 0.25
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(1)
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(-1)
+
+
+#    Button:
+#        text: "convert Miles to Kilometers"
+#        on_press: app.calculation()
+
+
+    Label:
+        id: output_label
+        text: "48.2802"
+        font_size: 48
+        color: (0, 0, 0, 1)
+        # color: (0, 1, 1, 1)
