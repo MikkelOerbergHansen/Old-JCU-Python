@@ -1,0 +1,10 @@
+exercise 2
+a. Inorder traversal
+b. Preorder traversal
+c. Postorder traversal
+
+a) inorder:    4 - 2 - 5 - 1 - 8 - 6 - 9 - 3 - 7 - 10
+
+b) preorder:   1 - 2 - 4 - 5 - 3 - 6 - 8 - 9 - 7 - 10
+
+c) postorder:  4 - 5 - 2 - 8 - 9 - 6 - 10 - 7 - 3 - 1

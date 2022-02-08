@@ -1,0 +1,20 @@
+exercise 1
+a. Which node is the root?
+b. What are the internal nodes?
+c. How many descendants does node cs016/ have?
+d. How many ancestors does node cs016/ have?
+e. What are the siblings of node homeworks/?
+f. Which nodes are in the subtree rooted at node projects/?
+g. What is the depth of node papers/?
+h. What is the height of the tree?
+
+
+Answers
+a) user/rt/courses
+b) everything except the root
+c) 9
+d) 1
+e) grades and programs
+f) papers, demos, buylow, sellhigh, market
+g) 3
+h) height = max(depth) = 4
