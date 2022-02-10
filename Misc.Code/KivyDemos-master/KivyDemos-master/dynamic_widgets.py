@@ -42,7 +42,7 @@ class DynamicWidgetsApp(App):
         for name in self.phonebook:
             # create a button for each phonebook entry, specifying the text and id
             # (although text and id are the same in this case, you should see how this works)
-            temp_button = Button(text=name)
+            temp_button = Button(text=name) #with button(text=name, id=name) program doesn't run
             temp_button.bind(on_release=self.press_entry)
             # add the button to the "entries_box" using add_widget()
             self.root.ids.entries_box.add_widget(temp_button)
@@ -54,7 +54,7 @@ class DynamicWidgetsApp(App):
         :return: None
         """
         # get name (dictionary key) from the id of Button we clicked on
-        name = instance.id  # or name = instance.text
+        name = instance.text  # or name = instance.text (var oprindeligt name = instance.id)
         # update status text
         self.status_text = "{}'s number is {}".format(name, self.phonebook[name])
 
