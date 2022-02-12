@@ -10,7 +10,7 @@ class SongList:
     def __init__(self):
         self.songs = []
 
-    def load_songs(self, file="songs.csv"):
+    def load_songs(self, file="Assignments/a2-MikkelOerberg/songs.csv"):
         with open(file, "r") as csv_file:
             song_array = list(csv.reader(csv_file))
         for song in song_array:
@@ -21,7 +21,7 @@ class SongList:
             self.songs.append(new_song)
 
     def save_songs(self):
-        with open("songs.csv", "w", newline="") as file:
+        with open("Assignments/a2-MikkelOerberg/songs.csv", "w", newline="") as file:
             song_list = csv.writer(file)
             for song in self.songs:
                 save_song = [song.title, song.artist, song.year, "y" if (song.is_required is False) else "n"]
