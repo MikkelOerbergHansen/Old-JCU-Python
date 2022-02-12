@@ -22,7 +22,7 @@ class SongsToLearnApp(App):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.my_song_list = SongList()
-        self.my_song_list.load_songs("songs.csv")
+        self.my_song_list.load_songs("Assignments/a2-MikkelOerberg/songs.csv")
         self.song_list = self.my_song_list.songs
         self.sort_options = ["title", "artist", "year", "is_required"]
         self.current_sort = self.sort_options[2]
@@ -48,12 +48,13 @@ class SongsToLearnApp(App):
                 my_text = '"{}" by {} ({})'.format(title, artist, year)
                 button_color = [0, 1, 1, 1]
             temp_button = Button(text=my_text, id=song.title, background_color=button_color)
+            #temp_button = Button(text=my_text, background_color=button_color)
             temp_button.bind(on_release=self.press_entry)
             self.root.ids.entries_box.add_widget(temp_button)
         self.is_required_text = "To learn: {}, Learned: {}".format(required_songs, learned_songs)
 
     def press_entry(self, instance):
-        name = instance.id
+        name = instance.title
         song1 = self.my_song_list.get_song(name)
         if song1.is_required is False:
             self.status_text = "you have marked '{}' as required".format(song1.title)
