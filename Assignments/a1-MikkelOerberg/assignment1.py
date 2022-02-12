@@ -82,7 +82,7 @@ def error_check(choice):
 
 
 def load_songs():
-    with open("songs.csv", "r") as file:
+    with open("Assignments/a1-MikkelOerberg/songs.csv", "r") as file:
         songs = list(csv.reader(file))
         print(str(len(songs)) + " songs loaded")
         return songs
@@ -225,7 +225,7 @@ def add_new_song(songs):
 
 
 def save_file(songs):
-    with open("songs.csv", "w", newline="") as file:
+    with open("Assignments/a1-MikkelOerberg/songs.csv", "w", newline="") as file:
         song_list = csv.writer(file)
         for song in songs:
             song_list.writerow(song)
