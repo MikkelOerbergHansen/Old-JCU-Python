@@ -19,7 +19,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from pq import HeapPriorityQueue,AdaptableHeapPriorityQueue
+#from pq import HeapPriorityQueue, AdaptableHeapPriorityQueue
+import adaptable_heap_priority_queue
+import heap_priority_queue
 from partition import Partition
 
 def MST_PrimJarnik(g):
@@ -29,7 +31,7 @@ def MST_PrimJarnik(g):
   """
   d = {}                               # d[v] is bound on distance to tree
   tree = []                            # list of edges in spanning tree
-  pq = AdaptableHeapPriorityQueue()   # d[v] maps to value (v, e=(u,v))
+  pq = adaptable_heap_priority_queue.AdaptableHeapPriorityQueue()   # d[v] maps to value (v, e=(u,v))
   pqlocator = {}                       # map from vertex to its pq locator
 
   # for each vertex v of the graph, add an entry to the priority queue, with
@@ -66,7 +68,7 @@ def MST_Kruskal(g):
   The elements of the graph's edges are assumed to be weights.
   """
   tree = []                   # list of edges in spanning tree
-  pq = HeapPriorityQueue()    # entries are edges in G, with weights as key
+  pq = heap_priority_queue.HeapPriorityQueue()    # entries are edges in G, with weights as key
   forest = Partition()        # keeps track of forest clusters
   position = {}               # map each node to its Partition entry
 
