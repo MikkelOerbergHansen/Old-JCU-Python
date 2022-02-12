@@ -2,7 +2,7 @@ import os
 import shutil
 
 print("Starting directory is: {}".format(os.getcwd()))
-os.chdir('FilesToSort')
+os.chdir('PracticalWeek9/FilesToSort')
 print("(Current working directory is: {})".format(os.getcwd()))
 path = os.getcwd()
 file_names = []
