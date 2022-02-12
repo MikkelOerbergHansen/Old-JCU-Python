@@ -47,14 +47,13 @@ class SongsToLearnApp(App):
             else:
                 my_text = '"{}" by {} ({})'.format(title, artist, year)
                 button_color = [0, 1, 1, 1]
-            temp_button = Button(text=my_text, id=song.title, background_color=button_color)
-            #temp_button = Button(text=my_text, background_color=button_color)
+            temp_button = Button(text=my_text,id=title, background_color=button_color)
             temp_button.bind(on_release=self.press_entry)
             self.root.ids.entries_box.add_widget(temp_button)
         self.is_required_text = "To learn: {}, Learned: {}".format(required_songs, learned_songs)
 
     def press_entry(self, instance):
-        name = instance.title
+        name = instance.id
         song1 = self.my_song_list.get_song(name)
         if song1.is_required is False:
             self.status_text = "you have marked '{}' as required".format(song1.title)
