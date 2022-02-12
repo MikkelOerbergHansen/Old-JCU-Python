@@ -13,7 +13,7 @@ def main():
 
 def load_guitars():
     guitars = []
-    with open("the_guitar_list.csv", "r") as file:
+    with open("PracticalWeek7/the_guitar_list.csv", "r") as file:
         read_guitars = list(csv.reader(file))
         for temp_guitars in read_guitars:
             name = temp_guitars[0]
