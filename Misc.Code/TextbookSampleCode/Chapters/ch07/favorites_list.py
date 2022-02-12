@@ -96,4 +96,8 @@ if __name__ == '__main__':
   for c in 'hello. this is a test of mtf':        # well, not the mtf part...
     fav.access(c)
     k = min(5, len(fav))
-    print('Top {0}) {1:25} {2}'.format(k, [x for x in fav.top(k)], fav))
+    print(k) 
+    print([x for x in fav.top(k)])
+    print(fav)
+    
+    #print('Top {0}) {1:25} {2}'.format(k, [x for x in fav.top(k)], fav))
