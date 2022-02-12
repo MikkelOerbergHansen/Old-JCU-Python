@@ -20,7 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-filename = sys.argv[1]
+filename = sys.argv[0]
 
 freq = {}
 for piece in open(filename).read().lower().split():
